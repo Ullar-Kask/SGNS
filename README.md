@@ -1,2 +1,2 @@
 # SGNS
-Train Skip-Gram Negative Sampling model in Tensorflow 2
+Trainig word embeddings with skip-gram negative sampling model in Tensorflow 2.
