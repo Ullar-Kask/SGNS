@@ -5,7 +5,7 @@ To start training enter on the command line:
 ```sh
 $ python embeddings_train.py
 ```
-To run tensorboard enter:
+To run `tensorboard` enter:
 ```sh
 $ tensorboard --logdir tensorboard
 ```
