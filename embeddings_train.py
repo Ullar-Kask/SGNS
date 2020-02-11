@@ -20,8 +20,6 @@ import random
 import time
 import numpy as np
 
-from embeddings_train_model import EmbeddingsTrainModel
-
 # Training parameters
 batch_size = 1000
 num_steps = 5_000_000
@@ -142,6 +140,7 @@ train_summary_writer = tf.summary.create_file_writer(train_log_dir)
 train_summary_writer.set_as_default()
 
 # Create model
+from embeddings_train_model import EmbeddingsTrainModel
 model = EmbeddingsTrainModel (vocabulary_size, embedding_size, num_sampled)
 
 total_loss = 0
@@ -151,7 +150,7 @@ start = time.time()
 # Train for a given number of steps
 for step in range (1, num_steps + 1):
     batch_x, batch_y = next_batch (batch_size, num_skips, skip_window)
-    loss=model.train (batch_x, batch_y)
+    loss = model.train (batch_x, batch_y)
     total_loss += loss
     
     if step%checkpoint_step == 0 or step == num_steps:
@@ -165,7 +164,7 @@ for step in range (1, num_steps + 1):
     if step%display_step == 0 or step == 1 or step == num_steps:
         end = time.time()
         avg_loss = total_loss / (step - step0)
-        tf.summary.scalar('Avg loss', loss, step=step)
+        tf.summary.scalar('Avg loss', avg_loss, step=step)
         print("Step {} / {}, ".format(step, num_steps),
               "Loss: {:.2f}, ".format(loss),
               "Avg loss: {:.2f}, ".format(avg_loss),
