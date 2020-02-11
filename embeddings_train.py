@@ -24,7 +24,7 @@ from embeddings_train_model import EmbeddingsTrainModel
 
 # Training parameters
 batch_size = 1000
-num_steps = 500_000
+num_steps = 5_000_000
 
 # Word2Vec parameters
 embedding_size = 200 # Dimension vector of Ythe embedding vector.
