@@ -4,7 +4,6 @@ For details see https://github.com/tensorflow/tensorboard/issues/2471#issuecomme
 
 import io
 import os
-import numpy as np
 import tensorflow as tf
 from tensorboard.plugins import projector
 
