@@ -2,9 +2,8 @@
 Train SGNS embeddings in TF2.
 
 Based on the code from:
-    https://github.com/tensorflow/tensorflow/blob/r0.9/tensorflow/examples/tutorials/word2vec/word2vec_basic.py
+    https://github.com/aymericdamien/TensorFlow-Examples/blob/master/tensorflow_v2/notebooks/2_BasicModels/word2vec.ipynb
     https://github.com/udacity/deep-learning/blob/master/embeddings/Skip-Grams-Solution.ipynb
-    https://blog.csdn.net/fendouaini/article/details/102766508
     https://stackoverflow.com/a/59993811
 """
 
