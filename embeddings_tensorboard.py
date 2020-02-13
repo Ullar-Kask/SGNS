@@ -1,7 +1,5 @@
 """
-
 For details see https://github.com/tensorflow/tensorboard/issues/2471#issuecomment-580423961
-
 """
 
 import io
@@ -26,7 +24,7 @@ def save_embeddings(embeddings_tensor, id2word, embeddings_name=EMBEDDINGS_TENSO
     saver = tf.compat.v1.train.Saver([embeddings_tensor])  # Must pass list or dict
     saver.save(sess=None, save_path=embeddings_path)
     out_meta = io.open(os.path.join(log_dir, meta_data_fname), 'w', encoding='utf-8')
-    for id, embedding in enumerate(embeddings_tensor.numpy()):
+    for id in id2word:
         word = id2word[id]
         out_meta.write(word + "\n")
     out_meta.close()
